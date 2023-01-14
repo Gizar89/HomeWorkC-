@@ -6,12 +6,9 @@ Console.Write("Введите 2-ое число:");
 int b = Convert.ToInt32(Console.ReadLine());
  
  if (a > b)
-  Console.WriteLine(a);
+  Console.WriteLine($"первое число больше:{a}");
  
  else if (a < b) 
-  Console.WriteLine (b);
+  Console.WriteLine ($"второе число больше:{b}");
  
-
- else 
-  Console.WriteLine("="); 
 
