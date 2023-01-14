@@ -9,7 +9,8 @@ int b = Convert.ToInt32(Console.ReadLine());
   Console.WriteLine(a);
  
  else if (a < b) 
-  Console.WriteLine(b);
+  Console.WriteLine (b);
+ 
 
  else 
   Console.WriteLine("="); 
