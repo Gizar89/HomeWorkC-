@@ -11,6 +11,7 @@ Console.Write(num3);
 num4 = (num%100)%10;
 Console.Write(num4);
 
+
 if(num1 == num4 && num2 == num3 )
 {
  Console.WriteLine (" это палиндром");  
