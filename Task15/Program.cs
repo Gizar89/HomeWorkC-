@@ -1,28 +1,28 @@
-﻿Console.WriteLine( "Введите число указывающее на размер массива: ");
-int n = Convert.ToInt32(Console.ReadLine());
-int[] numbers = new int[n];
-InputArrayRandomNumbers(numbers);
-Console.WriteLine("Цыфры в массиве: ");
-PrintArray(numbers);
-int sum = 0;
+﻿
 
-for(int m = 0; m < numbers.Length; m+=2)
-sum = sum + numbers[m];
-Console.WriteLine($"всего {numbers.Length} чисел, сумма элементов на нечётных позициях = {sum}");
-void InputArrayRandomNumbers(int[] numbers)
+
+// Переделал после разбора на семинаре
+
+void InputArray(int[] array)
 {
-for(int i = 0; i < numbers.Length; i++)
+  for (int i = 0; i < array.Length; i++)
+    array[i] = new Random().Next(1, 101); 
+}
+
+
+int SummaOddInArray(int[] array)
 {
-numbers[i] = new Random().Next(1,10);
+    int summa = 0;
+    for (int i = 1; i < array.Length; i+=2)
+      summa = summa + array[i];
+    return summa;
 }
-}
-void PrintArray(int[] numbers)
-{
-Console.Write("[ ");
-for(int i = 0; i < numbers.Length; i++)
-{
-Console.Write(numbers[i] + " ");
-}
-Console.Write("]");
-Console.WriteLine();
-}
+
+
+Console.Clear();
+Console.Write("Введите кол-во элементов: ");
+int n = Convert.ToInt32(Console.ReadLine());
+int[] array = new int[n];
+InputArray(array);
+Console.WriteLine($"Начальный массив: [{string.Join(", ", array)}]");
+Console.WriteLine($"Результат: {SummaOddInArray(array)}");
